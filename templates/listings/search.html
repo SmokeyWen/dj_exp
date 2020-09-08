@@ -10,7 +10,7 @@
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label class="sr-only">Keywords</label>
-                <input type="text" name="keywords" class="form-control" placeholder="Keyword (Primaris, Chaos, etc)">
+                <input type="text" name="keywords" class="form-control" placeholder="Keyword (Primaris, Chaos, etc)" value = '{{values.keywords}}'>
               </div>
 
               <div class="col-md-6 mb-3">
@@ -18,7 +18,11 @@
                 <select name="author" class="form-control">
                   <option selected="true" disabled="disabled">Author</option>
                   {% for key, item in author_choice.items %}
-                      <option value = "{{key}}">{{item}}</option>
+                      <option value = "{{key}}" 
+                      {% if key == values.author %}
+                        selected
+                      {% endif %}
+                      >{{item}}</option>
                     {% endfor %}
                 </select>
               </div>
@@ -30,7 +34,11 @@
                 <select name="price" class="form-control">
                   <option selected="true" disabled="disabled">Max Price</option>
                   {% for key, item in price_choice.items %}
-                      <option value = "{{key}}">{{item}}</option>
+                      <option value = "{{key}}"
+                      {% if key == values.price %}
+                        selected
+                      {% endif %}
+                      >{{item}}</option>
                     {% endfor %}
                 </select>
               </div>
@@ -38,7 +46,11 @@
                 <select name="days" class="form-control">
                   <option selected="true" disabled="disabled">Max Number of Days</option>
                   {% for key, item in duration_choice.items %}
-                      <option value = "{{key}}">{{item}}</option>
+                      <option value = "{{key}}"
+                      {% if key == values.days %}
+                        selected
+                      {% endif %}
+                      >{{item}}</option>
                     {% endfor %}
                 </select>
               </div>

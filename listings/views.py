@@ -57,6 +57,7 @@ def search(request):
         'author_choice': author_choice,
         'price_choice': price_choice,
         'duration_choice': duration_choice,
-        'results': query_list
+        'results': query_list,
+        'values': request.GET
     }
     return render(request, 'listings/search.html', context)
