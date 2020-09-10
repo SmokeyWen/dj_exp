@@ -10,8 +10,7 @@
           <h1 class="display-4 mb-4">
             Have I Painted What You Like?
           </h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-            voluptatum tempore! Consectetur, id commodi!</p>
+          <p class="lead">Search to see if I have painted something you would like to see. If not, stay tuned. Becauce I have a pile of boxes I haven't opened yet.</p>
           <div class="search">
             <form action="{% url 'search' %}">
               <!-- Form Row 1 -->
@@ -49,14 +48,14 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <select name="days" class="form-control" id="type">
-                    <option selected="true" disabled="disabled">Max Number of Day(s)</option>
+                    <option selected="true" disabled="disabled">Max Number of Days</option>
                     {% for key, item in duration_choice.items %}
                       <option value = "{{key}}">{{item}}</option>
                     {% endfor %}
                   </select>
                 </div>
               </div>
-              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -69,7 +68,7 @@
   <!-- Listings -->
   <section id="listings" class="py-5">
     <div class="container">
-      <h3 class="text-center mb-3">My Latest Work</h3>
+      <h3 class="text-center mb-3" style="color: #10284e ">My Latest Work</h3>
       <br/>
       <div class="row">
         {% if listings %}
@@ -129,25 +128,22 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4">
-          <i class="fas fa-comment fa-4x mr-4"></i>
+          <i class="fas fa-paw fa-4x mr-4"></i>
           <hr>
-          <h3>Consulting Services</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Life with a Puppy</h3>
+          <p>As a new member in the house, Smokey has given me a lot of emotional support and love since the beginning of 2020. I wouldn't know how life would be during lockdown if Smokey was not there. As everything getting better, it's going to be a happy journey ahead of us.</p>
         </div>
         <div class="col-md-4">
-          <i class="fas fa-home fa-4x mr-4"></i>
+          <i class="fas fa-code fa-4x mr-4"></i>
           <hr>
-          <h3>Propery Management</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>A Web Dev</h3>
+          <p>After two years in BCIT learning web dev with different frameworks, I decided to spend my time with some new hobbies and skills. This is why this website was born - perfectly combining them together.</p>
         </div>
         <div class="col-md-4">
-          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <i class="fas fa-paint-brush fa-4x mr-4"></i>
           <hr>
-          <h3>Renting & Selling</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>A New Painter</h3>
+          <p>I never thought I can be artistic someday. But this channel 达奇上校 on YouTube took me into the world of Warhammer, which reminded me that I too assembled some skeleton warriors twenty years ago. Maybe it is not a bad idea to get back to what I was enthusiastic about.</p>
         </div>
       </div>
     </div>
